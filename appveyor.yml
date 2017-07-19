@@ -19,9 +19,6 @@ cache:
 
 # Adapt as necessary starting from here
 build_script:
-  - travis-tool.sh install_deps
-
-test_script:
   # need to move to higher dir because CMake path req
   - mkdir C:\run
   - cp -avr * C:\run
@@ -48,7 +45,10 @@ test_script:
   #     $env:R_CHECK_INSTALL_ARGS="--install-args=--build --no-multiarch"
   #   } Else {
   #     $env:R_CHECK_INSTALL_ARGS=""
-  #   }  
+  #   }    
+  - travis-tool.sh install_deps
+
+test_script:
   - travis-tool.sh run_tests
   - ls
   # - cp ../*.zip ./
