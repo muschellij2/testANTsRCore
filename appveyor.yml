@@ -19,6 +19,12 @@ cache:
 
 # Adapt as necessary starting from here
 build_script:
+  - wget -O travis_helpers.sh http://bit.ly/travis_helpers
+  - source travis_helpers.sh
+  - rm travis_helpers.sh
+  - wget https://ci.appveyor.com/api/buildjobs/tu3s6m73682lhvc1/artifacts/ITKR_0.4.12.3.zip -O ITKR.zip
+  - Rscript -e 'install.packages("ITKR.zip", repos = NULL)'
+  - drop_remote ITKR
   # need to move to higher dir because CMake path req
   - mkdir C:\run
   - cp -avr * C:\run
