@@ -22,6 +22,8 @@ Imports:
     tools,
     stats,
     utils
+Suggests:
+    knitr
 SystemRequirements: cmake, git, clang (recommended)
 NeedsCompilation: yes
 RoxygenNote: 6.0.1.9000
