@@ -32,7 +32,9 @@ build_script:
   - cat travis_helpers.sh
   - bash travis_helpers.sh
   - ps: echo '@bash.exe ./travis_helpers.sh %*' | Out-File -Encoding ASCII ./travis_helpers.sh.cmd
+  - cat DESCRIPTION
   - travis_helpers.sh drop_remote ITKR  
+  - cat DESCRIPTION
   # setting PATH to be specific - no MinGW overall - just R's
   - set PATH=C:\Rtools\bin;C:\Rtools\MinGW\bin;
   - set PATH=%PATH%;C:\Rtools\mingw_64\bin;
