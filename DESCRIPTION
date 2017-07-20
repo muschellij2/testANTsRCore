@@ -19,18 +19,9 @@ LinkingTo: Rcpp,
 Imports:
     Rcpp,
     ITKR,
-    RcppEigen,
     tools,
-    magrittr,
     stats,
     utils
-Suggests:
-    abind,
-    pixmap,
-    viridis,
-    testthat,
-    knitr,
-    rmarkdown
 SystemRequirements: cmake, git, clang (recommended)
 NeedsCompilation: yes
 RoxygenNote: 6.0.1.9000
