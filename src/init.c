@@ -39,6 +39,7 @@ extern SEXP antsImage_TransformIndexToPhysicalPoint(SEXP, SEXP);
 extern SEXP antsImage_TransformPhysicalPointToIndex(SEXP, SEXP);
 extern SEXP antsImageClone(SEXP, SEXP);
 extern SEXP antsImageHeaderInfo(SEXP);
+extern SEXP antsImage_SetByImage( SEXP, SEXP, SEXP );
 extern SEXP antsImageRead(SEXP, SEXP, SEXP, SEXP);
 extern SEXP antsImageWrite(SEXP, SEXP);
 
@@ -56,6 +57,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"antsImage_isna",                          (DL_FUNC) &antsImage_isna,                           1},
     //{"antsImage_rm",                            (DL_FUNC) &antsImage_rm,                             1},
     // {"antsImage_RelationalOperators",           (DL_FUNC) &antsImage_RelationalOperators,            4},
+    {"antsImage_SetByImage",                    (DL_FUNC) &antsImage_SetByImage,                     3},
     {"antsImage_SetDirection",                  (DL_FUNC) &antsImage_SetDirection,                   2},
     {"antsImage_SetOrigin",                     (DL_FUNC) &antsImage_SetOrigin,                      2},
     {"antsImage_SetPixels",                     (DL_FUNC) &antsImage_SetPixels,                      3},
