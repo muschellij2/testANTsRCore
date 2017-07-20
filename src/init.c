@@ -57,7 +57,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"antsImage_isna",                          (DL_FUNC) &antsImage_isna,                           1},
     //{"antsImage_rm",                            (DL_FUNC) &antsImage_rm,                             1},
     // {"antsImage_RelationalOperators",           (DL_FUNC) &antsImage_RelationalOperators,            4},
-    {"antsImage_SetByImage",                    (DL_FUNC) &antsImage_SetByImage,                     3},
     {"antsImage_SetDirection",                  (DL_FUNC) &antsImage_SetDirection,                   2},
     {"antsImage_SetOrigin",                     (DL_FUNC) &antsImage_SetOrigin,                      2},
     {"antsImage_SetPixels",                     (DL_FUNC) &antsImage_SetPixels,                      3},
@@ -67,6 +66,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"antsImage_TransformPhysicalPointToIndex", (DL_FUNC) &antsImage_TransformPhysicalPointToIndex,  2},
     {"antsImageClone",                          (DL_FUNC) &antsImageClone,                           2},
     {"antsImageHeaderInfo",                     (DL_FUNC) &antsImageHeaderInfo,                      1},
+    {"antsImage_SetByImage",                    (DL_FUNC) &antsImage_SetByImage,                     3},
     {"antsImageRead",                           (DL_FUNC) &antsImageRead,                            4},
     {"antsImageWrite",                          (DL_FUNC) &antsImageWrite,                           2},
     {NULL, NULL, 0}
