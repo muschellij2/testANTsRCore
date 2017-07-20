@@ -23,11 +23,11 @@ build_script:
   - ls
   - Rscript -e "install.packages('ITKR.zip', repos = NULL)"  
   - wget -O travis_helpers.sh --no-check-certificate http://bit.ly/travis_helpers
-  # - echo '@bash.exe ../travis_helpers.sh %*' | Out-File -Encoding ASCII .\travis_helpers.sh.cmd
   - cat travis_helpers.sh
   - bash travis_helpers.sh
+  - echo '@bash.exe ../travis_helpers.sh %*' | Out-File -Encoding ASCII .\travis_helpers.sh.cmd
   - rm travis_helpers.sh
-  - drop_remote ITKR
+  - travis_helpers.sh drop_remote ITKR
   # need to move to higher dir because CMake path req
   - mkdir C:\run
   - cp -avr * C:\run
