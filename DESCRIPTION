@@ -32,7 +32,6 @@ Suggests:
     knitr,
     rmarkdown
 SystemRequirements: cmake, git, clang (recommended)
-Remotes: muschellij2/ITKR
 NeedsCompilation: yes
 RoxygenNote: 6.0.1.9000
 VignetteBuilder: knitr
