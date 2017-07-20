@@ -9,7 +9,7 @@ init:
 
 environment:
   global:
-    R_CHECK_INSTALL_ARGS: "--install-args=\"--build --debug\" --no-multiarch "
+    R_CHECK_INSTALL_ARGS: "--install-args=--build --no-multiarch "
 
 install:
   - ps: Bootstrap
