@@ -19,7 +19,7 @@ cache:
 
 # Adapt as necessary starting from here
 build_script:
-  - ps: Invoke-WebRequest http://ci.appveyor.com/api/buildjobs/tu3s6m73682lhvc1/artifacts/ITKR_0.4.12.3.zip -OutFile "ITKR.zip"
+  - ps: Invoke-WebRequest http://ci.appveyor.com/api/buildjobs/tu3s6m73682lhvc1/artifacts/ITKR_0.4.12.3.zip -OutFile ".\ITKR.zip"
   - Rscript -e 'install.packages("ITKR.zip", repos = NULL)'  
   - wget -O travis_helpers.sh --no-check-certificate http://bit.ly/travis_helpers
   # - echo '@bash.exe ../travis_helpers.sh %*' | Out-File -Encoding ASCII .\travis_helpers.sh.cmd
