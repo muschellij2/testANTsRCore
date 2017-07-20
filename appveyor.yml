@@ -25,7 +25,7 @@ build_script:
   - wget -O travis_helpers.sh --no-check-certificate http://bit.ly/travis_helpers
   - cat travis_helpers.sh
   - bash travis_helpers.sh
-  - ps: echo '@bash.exe ../travis_helpers.sh %*' | Out-File -Encoding ASCII .\travis_helpers.sh.cmd
+  - ps: echo '@bash.exe ./travis_helpers.sh %*' | Out-File -Encoding ASCII ./travis_helpers.sh.cmd
   - rm travis_helpers.sh
   - travis_helpers.sh drop_remote ITKR
   # need to move to higher dir because CMake path req
