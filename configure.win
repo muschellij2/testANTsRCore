@@ -2,7 +2,8 @@
 CXX_STD=CXX11
 ITKRCMAKE=`${R_HOME}/bin/Rscript.exe -e 'a<-ITKR::itkIncludes(); cat(a)'`
 ITKRLIB=`${R_HOME}/bin/Rscript.exe -e 'a<-ITKR::itkLibs(); cat(a)'`
-compflags=`${R_HOME}/bin/Rscript.exe -e 'a<-ITKR:::itkCompileFlags(); cat(a)'`
+# compflags=`${R_HOME}/bin/Rscript.exe -e 'a<-ITKR:::itkCompileFlags(); cat(a)'`
+compflags=" -O2 "
 ITKDIR=`${R_HOME}/bin/Rscript.exe -e 'a<-ITKR::itkDir(); cat(a)'`
 
 CMAKE_BUILD_TYPE=Release
