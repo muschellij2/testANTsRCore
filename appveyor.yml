@@ -52,18 +52,11 @@ build_script:
   - set PATH=%PATH%;C:\Windows\System32\Wbem
   - set PATH=%PATH%;C:\Windows\System32\WindowsPowerShell\v1.0\
   - set PATH=%PATH%;C:\Program Files\7-Zip
-  # - ps: >-
-  #   If ($env:APPVEYOR_REPO_TAG -Match "true") {
-  #     $env:R_CHECK_INSTALL_ARGS="--install-args=--build --no-multiarch"
-  #   } Else {
-  #     $env:R_CHECK_INSTALL_ARGS=""
-  #   }    
   - travis-tool.sh install_deps
 
 test_script:
   - travis-tool.sh run_tests
   - ls
-  # - cp ../*.zip ./
   - cp -r C:/run/* %APPVEYOR_BUILD_FOLDER%
   - cd %APPVEYOR_BUILD_FOLDER%
   - ls
